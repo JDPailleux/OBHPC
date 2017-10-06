@@ -1,0 +1,38 @@
+Commandes - PAILLEUX Jean-Didier - M1 CHPS
+
+1)
+	cd /tmp/
+	mkdir sample-1.0/
+	cd sample-1.0/
+2)
+	mkdir src/ include/ env/
+3)
+	touch src/main.c src/func.c include/func.h env/input.data
+	echo "Allo? Le monde?" > env/input.data
+4)
+	touch MAKEFILE README
+	echo "Le TP est réalisé par PAILLEUX" > README
+5)
+	chmod go=r README
+6)
+	touch sample
+	chmod u+x sample
+7)
+	touch launcher.sh
+	chmod ugo=rx launcher.sh
+	chmod u+w launcher.sh
+8)
+	cd ../
+	cp -R sample-1.0/ sample-1.2/
+	cat sample-1.2/README
+	cat sample-1.2/README > sample-1.2/ans1.dat
+9)
+	cd sample-1.2/
+	grep -lR "Le" > ans2.dat
+10)
+	ls | wc -l > ans3.dat // Correction : find * -type=file | wc -l
+11)
+	cd ../
+	rm -R sample-1.0/
+12)
+	tar -cvf sample.tar.gz sample-1.2/
